@@ -20,4 +20,28 @@ public class Category implements Serializable {
     private String name;
     @OneToMany(mappedBy = "category")
     private Collection<Film> films;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Collection<Film> getFilms() {
+        return films;
+    }
+
+    public void setFilms(Collection<Film> films) {
+        this.films = films;
+    }
 }
