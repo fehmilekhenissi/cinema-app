@@ -23,6 +23,6 @@ public class Salle implements Serializable {
     private Cinema cinema;
     @OneToMany(mappedBy = "salle")
     private Collection<Place> places;
-    @OneToMany
+    @OneToMany(mappedBy = "salle")
     private Collection<Projection> projections;
 }
