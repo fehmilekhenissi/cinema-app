@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://khenissi.fh:5432/cinemadb"
+    username: postgres
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: validate
+        database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+        show_sql: true
+        format_sql: true
