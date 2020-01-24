@@ -1,4 +1,4 @@
-package com.cgi.cinema.dao;
+package com.cgi.cinema.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -16,9 +16,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "seance")
 public class Seance implements Serializable {
     @Id
@@ -27,4 +24,27 @@ public class Seance implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date heureDebut;
 
+    public Seance() {
+    }
+
+    public Seance(Long id, Date heureDebut) {
+        this.id = id;
+        this.heureDebut = heureDebut;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getHeureDebut() {
+        return heureDebut;
+    }
+
+    public void setHeureDebut(Date heureDebut) {
+        this.heureDebut = heureDebut;
+    }
 }
